@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVA</title>
+
+    <!-- CSS y Js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- CSS y Js de Ardora -->
+    <link type="text/css" href="../css/1_2/ardoraCW.css" rel="stylesheet" />
+    <script language="javascript" type="text/javascript" src="../js/1_2/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/1_2/jquery-ui.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/1_2/jquery.ui.touch-punch.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/1_2/ardoraCWCFG.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/1_2/ardoraScorm.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/1_2/ardoraCW.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/1_2/ardoraTab.js"></script>
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../img/uva.ico">
+
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Logo -->
+        <a class="navbar-brand ps-3" href="home.html">
+            <img src="../img/uva_logo.png" alt="" width="35" height="35">
+            Teoría de la Computación</a>
+
+        <!-- Usuario -->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        </form>
+        <form class="d-flex" action="#">
+            <button class="btn btn-light" type="submit"><img src="../img/usuario.png" width="30" height="30"></button>
+        </form>
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        </ul>
+    </nav>
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <!-- Indice -->
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Nivel 1:<br>Las gramáticas formales en la computación</div>
+                        <div class="list-group" id="myList" role="tablist">
+                            <a class="nav-link" href="nivel1_1.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Conceptos introductorios
+                            </a>
+                            <a class="nav-link active" href="nivel1_2.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Lenguajes Formales
+                            </a>
+                            <a class="nav-link" href="nivel1_3.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Expresiones Regulares
+                            </a>
+                            <a class="nav-link" href="nivel1_4.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Gramáticas formales
+                            </a>
+                            <a class="nav-link" href="nivel1_5.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Caracterización de una Gramática
+                            </a>
+                            <a class="nav-link" href="nivel1_6.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Jerarquía de Chomsky
+                            </a>
+                            <a class="nav-link" href="nivel1_7.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Forma Normal de Chomsky
+                            </a>
+                            <a class="nav-link" href="nivel1_8.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Forma Normal de Greibach
+                            </a>
+                            <a class="nav-link" href="nivel1_9.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Árboles de derivación
+                            </a>
+                        </div>
+
+                        <br>
+
+                        <div class="sb-sidenav-menu-heading">Nivel 2:<br>Autómatas de estados finitos</div>
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Próximamente
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Contenido -->
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Lenguajes Formales y sus Operaciones</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Nivel 1: Gramáticas Formales en la Computación</li>
+                    </ol>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-book me-1"></i>
+                            <b>Lenguajes Formales</b>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Son conjuntos de cadenas de símbolos que siguen ciertas reglas
+                                sintácticas y son utilizados principalmente en la teoría de la computación, la
+                                lingüística formal y las ciencias de la información. Estos lenguajes son fundamentales
+                                para el desarrollo de algoritmos, compiladores y autómatas. Los lenguajes formales son
+                                generalmente definidos por una gramática formal y están relacionados con diferentes
+                                clases de autómatas, como los autómatas finitos, autómatas de pila, entre otros.
+                            </p>
+                            <p style="text-align: center;"><img src="../img/cadena_img.png" alt="" width="50%"
+                                    height="50%"></p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-book me-1"></i>
+                            <b>Operaciones sobre Lenguajes Formales</b>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Existen varias operaciones que se pueden realizar sobre lenguajes formales. Estas
+                                operaciones permiten combinar o transformar lenguajes de diversas maneras.
+                                <br><br>
+                                Entre ellas estan:
+                                <br>
+                                <b>1. </b>Unión ( U )
+                                <br>
+                                <b>2. </b>Concatenación ( · )
+                                <br>
+                                <b>3. </b>Cerradura de Kleene ( * )
+                                <br>
+                                <b>4. </b>Intersección ( ∩ )
+                                <br>
+                                <b>5. </b>Diferencia ( - )
+                                <br>
+                                <b>6. </b>Complemento ( L^c )
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-book me-1"></i>
+                                    Unión ( ∪ )
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        La unión de dos lenguajes L<sub>1</sub> y L<sub>2</sub> es un nuevo lenguaje que
+                                        contiene todas las cadenas que pertenecen a L<sub>1</sub>, L<sub>2</sub>, o a
+                                        ambos.
+                                    </p>
+                                    <p>
+                                        \( L_1 \cup L_2 = \{ w \mid w \in L_1 \text{ o } w \in L_2 \} \)
+                                    </p>
+                                    <p><b>Ejemplo:</b>
+                                        \( L_1 = \{ a, b \} \quad L_2 = \{ b, c \} \quad \Rightarrow \quad L_1 \cup L_2
+                                        = \{ a, b, c \} \)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-book me-1"></i>
+                                    Concatenación ( · )
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        La concatenación de dos lenguajes L<sub>1</sub> y L<sub>2</sub> produce un
+                                        lenguaje que contiene
+                                        todas las cadenas formadas al concatenar una cadena de L<sub>1</sub> con una
+                                        cadena de L<sub>2</sub>.
+                                    </p>
+                                    <p>
+                                        \( L_1 \cdot L_2 = \{ w_1 w_2 \mid w_1 \in L_1 \text{ y } w_2 \in L_2 \} \)
+                                    </p>
+                                    <p>
+                                        <b>Ejemplo:</b>
+                                        \( L_1 = \{a, b\}, \quad L_2 = \{c, d\} \quad \Rightarrow \quad L_1 \cdot L_2 =
+                                        \{ac, ad, bc, bd\} \)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-book me-1"></i>
+                                    Cerradura de Kleene ( * )
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        La cerradura de Kleene de un lenguaje 𝐿 es el conjunto de todas las posibles
+                                        cadenas que se pueden formar concatenando cero o más cadenas del lenguaje 𝐿.
+                                        Es una forma de incluir el comportamiento repetitivo en el lenguaje.
+                                    </p>
+                                    <p>
+                                        \( L^* = \{ w_1 w_2 \dots w_n \mid w_1, w_2, \dots, w_n \in L, n \geq 0 \} \)
+                                    </p>
+                                    <br>
+                                    <p><b>Ejemplo:</b> <br>
+                                        Dado el lenguaje \( L = \{a, b\} \), la cerradura de Kleene \( L^* \) es:</p>
+                                    <p>
+                                        \( L^* = \{ \epsilon, a, b, aa, ab, ba, bb, aaa, aab, \dots \} \)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-book me-1"></i>
+                                    Intersección ( ∩ )
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        La intersección de dos lenguajes L<sub>1</sub> y L<sub>2</sub> es el conjunto de
+                                        las cadenas que pertenecen a ambos lenguajes.
+                                    </p>
+                                    <p>
+                                        \( L_1 \cap L_2 = \{ w \mid w \in L_1 \text{ y } w \in L_2 \} \)
+                                    </p>
+                                    <p><b>Ejemplo:</b> <br>
+                                        Dado los lenguajes:</p>
+                                    <p>
+                                        \( L_1 = \{a, b, c\} \quad \text{y} \quad L_2 = \{b, c, d\} \)
+                                    </p>
+                                    <p>La intersección de \( L_1 \) y \( L_2 \) es:</p>
+                                    <p>
+                                        \( L_1 \cap L_2 = \{ b, c \} \)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-book me-1"></i>
+                                    Diferencia ( - )
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        La diferencia de dos lenguajes L<sub>1</sub> y L<sub>2</sub> es el conjunto de
+                                        las cadenas que
+                                        pertenecen a L<sub>1</sub> pero no a L<sub>2</sub>.
+                                    </p>
+                                    <p>
+                                        \( L_1 - L_2 = \{ w \mid w \in L_1 \text{ y } w \notin L_2 \} \)
+                                    </p>
+                                    <p><b>Ejemplo:</b><br>
+                                        Dado los lenguajes \( L_1 = \{a, b, c\} \) y \( L_2 = \{b, c, d\} \), la
+                                        diferencia de \( L_1 \) y \( L_2 \) es:</p>
+                                    <p>
+                                        \( L_1 - L_2 = \{ a \} \)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-book me-1"></i>
+                                    Complemento ( L^c )
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        El complemento de un lenguaje 𝐿 es el conjunto de todas las cadenas posibles
+                                        (en el alfabeto del lenguaje) que no están en 𝐿. En otras palabras, es el
+                                        conjunto de todas las cadenas que no pertenecen al lenguaje.
+                                    </p>
+                                    <p>
+                                        \( L^c = \{ w \mid w \notin L \} \)
+                                    </p>
+                                    <p><b>Ejemplo:</b><br>
+                                        Si el alfabeto es \( \Sigma = \{a, b\} \) y el lenguaje \( L = \{a, ab\} \), el
+                                        complemento de \( L \) es:</p>
+                                    <p>
+                                        \( L^c = \{ w \mid w \notin L \} \)
+                                    </p>
+                                    <p>En este caso, el complemento de \( L \) sería:</p>
+                                    <p>
+                                        \( L^c = \{ \epsilon, b, aa, ba, bb, aba, abb, abba, bba, \dots \} \)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-chess-bishop me-1"></i>
+                            <b>Actividad 1.2</b>
+                        </div>
+                        <div class="card-body">
+                            <!-- Actividad Ardora -->
+                            <div id="ardoraMain">
+                                <div id="ardoraEnu"></div>
+                                <div id="ardoraAct">
+                                    <table id="tableGame">
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_0" name="C3_0" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C7_0" name="C7_0" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="activeCell"><input id="C0_1" name="C0_1" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C1_1" name="C1_1" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C2_1" name="C2_1" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C3_1" name="C3_1" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C4_1" name="C4_1" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C7_1" name="C7_1" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_2" name="C3_2" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C7_2" name="C7_2" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_3" name="C3_3" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C7_3" name="C7_3" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_4" name="C3_4" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C7_4" name="C7_4" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_4" name="C11_4" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C1_5" name="C1_5" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C2_5" name="C2_5" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C3_5" name="C3_5" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C4_5" name="C4_5" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C5_5" name="C5_5" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C6_5" name="C6_5" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C7_5" name="C7_5" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C8_5" name="C8_5" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C9_5" name="C9_5" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C10_5" name="C10_5" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C11_5" name="C11_5" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="activeCell"><input id="C12_5" name="C12_5" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_6" name="C3_6" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C7_6" name="C7_6" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_6" name="C11_6" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_7" name="C3_7" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C7_7" name="C7_7" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_7" name="C11_7" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_8" name="C3_8" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C7_8" name="C7_8" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_8" name="C11_8" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_9" name="C3_9" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C7_9" name="C7_9" type="text" class="cell"
+                                                    maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_9" name="C11_9" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_10" name="C3_10" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_10" name="C11_10" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_11" name="C3_11" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_11" name="C11_11" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_12" name="C3_12" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_12" name="C11_12" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C3_13" name="C3_13" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_13" name="C11_13" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="hidetd"></td>
+                                            <td class="activeCell"><input id="C11_14" name="C11_14" type="text"
+                                                    class="cell" maxlength="1" /></td>
+                                            <td class="hidetd"></td>
+                                        </tr>
+                                    </table>
+                                    <canvas id="ardoraActCanvas" width="2px" height="2px"></canvas>
+                                    <div id="buttonDir"><canvas id="ardoraButtonDirCanvas" width="40px"
+                                            height="40px"></canvas></div>
+                                    <div id="defIma"></div>
+                                </div>
+                                <div id="ardoraTab">
+                                    <div id="buttonOk"><canvas id="buttonOkCanvas" width="70" height="70"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin Actividad Ardora -->
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- js Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
